@@ -52,21 +52,32 @@ showImage();
 int score = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
 
+if (e.getKeyCode() == imageIndex && simonSays) {
+	score ++;
+	speak("That is 100% totally amazingly really correct");	
+}
 		// 17. Increase the value of score
-
+//done
 		// 18. Use the speak method to tell the user they were correct
-
+//done
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
-
+		
+if(e.getKeyCode() != imageIndex && !simonSays) {
+			score++;
+			speak("That is 100% totally amazingly really correct");
+		}
 		// 20. Increase the value of score
 
 		// 21. Use the speak method to tell the user they were correct
 
 		// 22. Increment tries by 1
-
+tries++;
 		// 25. If tries is greater than 9 (or however many you want)...
-
+if (tries > 9) {
+	JOptionPane.showMessageDialog(null, "Your score is " + score + " That is it");
+	
+}
 		// 26. Tell the user their score
 
 		// 27. Exit the program
