@@ -31,7 +31,7 @@ public class SimonSays extends KeyAdapter {
 
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
-JFrame JF = new JFrame();
+JFrame JF;
 	public void run() {
 		// 2. Add the four images that match keyboard keys like this:
 		// images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
@@ -65,7 +65,7 @@ if (e.getKeyCode() == imageIndex && simonSays) {
 		
 if(e.getKeyCode() != imageIndex && !simonSays) {
 			score++;
-			speak("That is 100% totally amazingly really correct");
+			speak("That is 100% totally amazingly really actually absolutely perfectly entirely wholeheartedly unconditionally exactly correct");
 		}
 		// 20. Increase the value of score
 
@@ -83,15 +83,16 @@ if (tries > 9) {
 		// 27. Exit the program
 
 		// 23. Dispose of the frame
-
+JF.dispose();
 		// 24. Call the showImage method to show a new image
+	showImage();
 	}
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
 JF = new JFrame();
 		// 6. Set the frame to visible
-JF.isVisible();
+JF.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
 		// frame.add(getNextRandomImage());
 JF.add(getNextRandomImage());
