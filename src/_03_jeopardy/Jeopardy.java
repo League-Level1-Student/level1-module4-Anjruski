@@ -54,15 +54,15 @@ frame.setVisible(true);
 		// 2. Give your frame a title
 frame.setTitle("crab");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
-JPanel JP = new JPanel();
+JPanel Header = createHeader("Games");
 		// 4. Add the header component to the quizPanel
-
+Header.add(quizPanel);
 		// 5. Add the quizPanel to the frame
-
+quizPanel.add(frame);
 		// 6. Use the createButton method to set the value of firstButton
-
+JButton firstButton = createButton("woah");
 		// 7. Add the firstButton to the quizPanel
-
+firstButton.add(quizPanel);
 		// 8. Write the code to complete the createButton() method below. Check that your
 		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 
@@ -93,11 +93,11 @@ JPanel JP = new JPanel();
 	private JButton createButton(String dollarAmount) {
 		
 		// Create a new JButton
-
+JButton buttonCount = new JButton();
 		// Set the text of the button to the dollarAmount
-
+buttonCount.setText("100");
 		// Increment the buttonCount (this should make the layout vertical)
-
+ 
 		// Return your new button instead of the temporary button
 
 		return new JButton("temporary button");
