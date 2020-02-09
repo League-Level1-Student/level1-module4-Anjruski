@@ -60,7 +60,7 @@ quizPanel.add(Header);
 		// 5. Add the quizPanel to the frame
 frame.add(quizPanel);
 		// 6. Use the createButton method to set the value of firstButton
-JButton firstButton = createButton("woah");
+firstButton = createButton("woah");
 		// 7. Add the firstButton to the quizPanel
 quizPanel.add(firstButton);
 		// 8. Write the code to complete the createButton() method below. Check that your
@@ -110,8 +110,9 @@ buttonThing.setText("100");
 		// Remove this temporary message after testing:
 		
 		JButton buttonPressed = (JButton) e.getSource();
+		
 		// If the buttonPressed was the firstButton
-if (buttonPressed == firstButton) {
+if (buttonPressed .equals (firstButton)) {
 	askQuestion("What what the most popular game in 2018?", "Fortnite" , 100);
 }
 			// Call the askQuestion() method
@@ -131,24 +132,30 @@ if (buttonPressed == firstButton) {
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
 		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
-		
+		String answer1 = JOptionPane.showInputDialog(null, "Is minecraft good?");
+		correctAnswer = "yes";
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
-		
+		sound.stop();
 		// If the answer is correct
-
+if (answer1 .equals (correctAnswer)) {
+	score+=100;
+	JOptionPane.showMessageDialog(null, "you are correct, good");
+}
 			// Increase the score by the prizeMoney
 
 			// Pop up a message to tell the user they were correct
 
 		// Otherwise
-
+else if (answer1 != correctAnswer) {
+	score -=100;
+	JOptionPane.showMessageDialog(null, "that is incorrect");
+}
 			// Decrement the score by the prizeMoney
 
 			// Pop up a message to tell the user they were wrong and give them the correct answer
 
 		// Call the updateScore() method
-
+updateScore();
 	}
 
 	public void playJeopardyTheme() {
