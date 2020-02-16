@@ -68,7 +68,7 @@ quizPanel.add(firstButton);
 //done
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-secondButton = createButton("200");
+secondButton = createButton("that");
 		// 10. Add the secondButton to the quizPanel
 quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
@@ -76,8 +76,18 @@ firstButton.addActionListener(this);
 secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
 
-		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
-		
+		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 buttons
+	
+thirdButton = createButton("is");
+fourthButton = createButton("cool");
+
+quizPanel.add(thirdButton);
+quizPanel.add(fourthButton);
+
+thirdButton.addActionListener(this);
+fourthButton.addActionListener(this);
+frame.pack();
+
 		 /*
 		 * [optional] Use the showImage or playSound methods when the user answers a
 		 * question
@@ -96,7 +106,7 @@ secondButton.addActionListener(this);
 		// Create a new JButton
 JButton buttonThing = new JButton();
 		// Set the text of the button to the dollarAmount
-buttonThing.setText("100");
+buttonThing.setText(dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
  buttonCount++;
 		// Return your new button instead of the temporary button
@@ -134,6 +144,7 @@ if (buttonPressed .equals (firstButton)) {
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
 		String answer1 = JOptionPane.showInputDialog(null, "Is minecraft good?");
 		correctAnswer = "yes";
+				
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
 		sound.stop();
 		// If the answer is correct
