@@ -1,5 +1,7 @@
 package _05_typing_tutor;
 
-public class typeboi {
+import javax.swing.JFrame;
 
+public class typeboi {
+	JFrame JF = new JFrame("typetipetypppppppe");
 }
