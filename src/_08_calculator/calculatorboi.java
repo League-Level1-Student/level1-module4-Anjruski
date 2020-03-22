@@ -1,5 +1,6 @@
 package _08_calculator;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
@@ -12,6 +13,10 @@ public static void main(String[] args) {
 	JFrame JF = new JFrame();
 	JTextField Number1 = new JTextField();
 	JTextField Number2 = new JTextField();
+	JButton AddButton = new JButton();
+	JButton SubtractButton = new JButton();
+	JButton MultiplyButton = new JButton();
+	JButton DivideButton = new JButton();
 	void Run() {
 		JF.setVisible(true);
 		JF.add(Number1);
