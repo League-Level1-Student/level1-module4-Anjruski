@@ -9,17 +9,20 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class piglatinboi implements ActionListener {
-public static void main(String[] args) {
+	JFrame JF = new JFrame();
+	JPanel JP = new JPanel();
+	JTextField JT1 = new JTextField(25);
+	JButton JB = new JButton("do a flip");
+	JTextField JT2 = new JTextField(30);
+	
+	public static void main(String[] args) {
 piglatinboi PIG = new piglatinboi();
+
 	PIG.run();
 	
 	
 } 
-JFrame JF = new JFrame();
-JPanel JP = new JPanel();
-JTextField JT1 = new JTextField(25);
-JButton JB = new JButton("do a flip");
-JTextField JT2 = new JTextField(30);
+
 void run () {
 	JF.add(JP);
 	JP.add(JT1);
@@ -31,18 +34,20 @@ void run () {
 	
 }
 @Override
-public void actionPerformed(ActionEvent arg0) {
+public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
+if (e.getSource() == JB) {
+	PigLatinTranslator plt = new PigLatinTranslator();
+	System.out.println(plt.translate(JT1.getText()));
+	JT2.setText(plt.translate(JT1.getText()));
+}
+	
+	
+	
+	
+	
 	
 }
-
-
-
-
-
-
-
-
 	}
 
 
